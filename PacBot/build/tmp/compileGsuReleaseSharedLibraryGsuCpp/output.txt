@@ -1,0 +1,36 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileGsuReleaseSharedLibraryGsuCpp/output.txt for all output for compileGsuReleaseSharedLibraryGsuCpp.
+compiling Advisory.cpp successful.
+
+compiling AdvisoryFile.cpp successful.
+
+compiling AdvisoryStdErr.cpp successful.
+
+compiling AdvisoryStdOut.cpp successful.
+
+compiling BuildVersion.cpp successful.
+
+compiling Config.cpp successful.
+
+compiling Crc16.cpp successful.
+
+compiling File.cpp successful.
+
+compiling Parameter.cpp successful.
+
+compiling PiecewiseLinear.cpp successful.
+
+compiling Polynomial.cpp successful.
+
+compiling SegmentedFile.cpp successful.
+
+compiling ParameterFile.cpp successful.
+
+compiling PathUtil.cpp successful.
+
+compiling SubscriptionStore.cpp successful.
+
+compiling Spline.cpp successful.
+
+compiling tinyxml2.cpp successful.
+
+Finished compileGsuReleaseSharedLibraryGsuCpp, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileGsuReleaseSharedLibraryGsuCpp/output.txt.

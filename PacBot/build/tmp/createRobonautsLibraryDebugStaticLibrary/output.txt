@@ -1,0 +1,4 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/createRobonautsLibraryDebugStaticLibrary/output.txt for all output for createRobonautsLibraryDebugStaticLibrary.
+archiving libRobonautsLibrary.a successful.
+
+Finished createRobonautsLibraryDebugStaticLibrary, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/createRobonautsLibraryDebugStaticLibrary/output.txt.

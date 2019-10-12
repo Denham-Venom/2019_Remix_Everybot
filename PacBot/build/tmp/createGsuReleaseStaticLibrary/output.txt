@@ -1,0 +1,4 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/createGsuReleaseStaticLibrary/output.txt for all output for createGsuReleaseStaticLibrary.
+archiving libgsu.a successful.
+
+Finished createGsuReleaseStaticLibrary, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/createGsuReleaseStaticLibrary/output.txt.

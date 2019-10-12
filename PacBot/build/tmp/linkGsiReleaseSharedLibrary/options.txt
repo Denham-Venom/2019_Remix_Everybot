@@ -1,0 +1,17 @@
+-shared
+-Wl,-soname,libgsi.so
+-o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\libs\\gsi\\shared\\release\\libgsi.so
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\1m5c0ulyt4uh1ewe4o846j9xq\\Semaphore.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\1utlb0p75q76k7xobfzl8309z\\Socket.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\28f5qzrl2awcpebzubx0aa5gl\\Mutex.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\5s1j495txnxhv2chak1hmbt19\\Timer.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\65ows0y48zkl1tt1zfyzsj5k8\\Network.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\91nnbwxw1eua4hhqvellyoxwz\\Thread.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\9a77i43hmt158zttrgvly8vhi\\PeriodicThread.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\c1pmigeut92wulaskeuteo8l3\\Time.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\dnr1yjp4pyqm647920stm5wh8\\Exception.o
+C:\\Users\\Samuel\\Documents\\VSCProjects\\Robots\\2019_Remix_Everybot\\PacBot\\build\\objs\\gsi\\shared\\release\\gsiCpp\\f4e0scqdxelbszf6safcrovlm\\Path.o
+-rdynamic
+-pthread
+-ldl

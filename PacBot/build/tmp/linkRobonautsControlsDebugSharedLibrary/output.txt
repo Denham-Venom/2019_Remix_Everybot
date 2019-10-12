@@ -1,0 +1,4 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/linkRobonautsControlsDebugSharedLibrary/output.txt for all output for linkRobonautsControlsDebugSharedLibrary.
+linking libRobonautsControls.so successful.
+
+Finished linkRobonautsControlsDebugSharedLibrary, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/linkRobonautsControlsDebugSharedLibrary/output.txt.

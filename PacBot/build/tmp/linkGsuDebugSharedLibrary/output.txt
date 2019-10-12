@@ -1,0 +1,4 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/linkGsuDebugSharedLibrary/output.txt for all output for linkGsuDebugSharedLibrary.
+linking libgsu.so successful.
+
+Finished linkGsuDebugSharedLibrary, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/linkGsuDebugSharedLibrary/output.txt.

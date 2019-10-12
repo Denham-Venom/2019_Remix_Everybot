@@ -1,0 +1,32 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileRobonautsControlsDebugSharedLibraryRobonautsControlsCpp/output.txt for all output for compileRobonautsControlsDebugSharedLibraryRobonautsControlsCpp.
+compiling PeriodicControl.cpp successful.
+
+compiling ControlThread.cpp successful.
+
+compiling CompressorControl.cpp successful.
+
+compiling ControlFactory.cpp successful.
+
+compiling MotorControl.cpp successful.
+
+compiling CameraServerControl.cpp successful.
+
+compiling GameDataControl.cpp successful.
+
+compiling KiwiDriveControl.cpp successful.
+
+compiling PositionJointSRX.cpp successful.
+
+compiling ArcadeDriveControl.cpp successful.
+
+compiling SolenoidControl.cpp successful.
+
+compiling TurretControl.cpp successful.
+
+compiling PacbotBase.cpp successful.
+
+compiling RelayControl.cpp successful.
+
+compiling ServoControl.cpp successful.
+
+Finished compileRobonautsControlsDebugSharedLibraryRobonautsControlsCpp, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileRobonautsControlsDebugSharedLibraryRobonautsControlsCpp/output.txt.

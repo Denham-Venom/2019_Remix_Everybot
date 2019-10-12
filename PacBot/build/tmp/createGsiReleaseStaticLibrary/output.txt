@@ -1,0 +1,4 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/createGsiReleaseStaticLibrary/output.txt for all output for createGsiReleaseStaticLibrary.
+archiving libgsi.a successful.
+
+Finished createGsiReleaseStaticLibrary, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/createGsiReleaseStaticLibrary/output.txt.

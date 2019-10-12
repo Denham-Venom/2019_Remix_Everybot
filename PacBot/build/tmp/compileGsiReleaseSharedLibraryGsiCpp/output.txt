@@ -1,0 +1,22 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileGsiReleaseSharedLibraryGsiCpp/output.txt for all output for compileGsiReleaseSharedLibraryGsiCpp.
+compiling Exception.cpp successful.
+
+compiling Mutex.cpp successful.
+
+compiling Network.cpp successful.
+
+compiling Path.cpp successful.
+
+compiling PeriodicThread.cpp successful.
+
+compiling Semaphore.cpp successful.
+
+compiling Socket.cpp successful.
+
+compiling Thread.cpp successful.
+
+compiling Time.cpp successful.
+
+compiling Timer.cpp successful.
+
+Finished compileGsiReleaseSharedLibraryGsiCpp, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileGsiReleaseSharedLibraryGsiCpp/output.txt.

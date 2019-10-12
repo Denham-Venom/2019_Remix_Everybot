@@ -1,0 +1,66 @@
+See file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileRobonautsLibraryDebugStaticLibraryRobonautsLibraryCpp/output.txt for all output for compileRobonautsLibraryDebugStaticLibraryRobonautsLibraryCpp.
+compiling ADIS16448_IMU.cpp successful.
+
+compiling BPid.cpp successful.
+
+compiling CartTrajectory.cpp successful.
+
+compiling DataLogger.cpp successful.
+
+compiling LinesPointsMath.cpp successful.
+
+compiling MacroStepFactory.cpp successful.
+
+compiling OICypress.cpp successful.
+
+compiling Macro.cpp successful.
+
+compiling MacroStep.cpp successful.
+
+compiling OIJoystick.cpp successful.
+
+compiling OIDevice.cpp successful.
+
+compiling RAbsPosSensor.cpp successful.
+
+compiling RCounter.cpp successful.
+
+compiling RDblSolenoid.cpp successful.
+
+compiling RDigitalInput.cpp successful.
+
+compiling RGyro.cpp successful.
+
+compiling RPot.cpp successful.
+
+compiling RobotUtil.cpp successful.
+
+compiling RSerialPort.cpp successful.
+
+compiling ScaledAnalog.cpp successful.
+
+compiling RSpiGyro.cpp successful.
+
+compiling SimpleTrapCntl.cpp successful.
+
+compiling SimplePID.cpp successful.
+
+compiling RSpeedController.cpp successful.
+
+compiling XmlRobotUtil.cpp successful.
+
+compiling RAnalogIrSensor.cpp successful.
+
+compiling OIDriverStation.cpp successful.
+
+compiling MacroController.cpp successful.
+
+compiling OIController.cpp successful.
+
+compiling MultiSpeedTrajectory.cpp successful.
+
+compiling OIObserver.cpp successful.
+
+compiling OIGenericHID.cpp successful.
+
+Finished compileRobonautsLibraryDebugStaticLibraryRobonautsLibraryCpp, see full log file:///C:/Users/Samuel/Documents/VSCProjects/Robots/2019_Remix_Everybot/PacBot/build/tmp/compileRobonautsLibraryDebugStaticLibraryRobonautsLibraryCpp/output.txt.
