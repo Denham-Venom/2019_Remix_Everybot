@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<macro name= "Center Gear">
+	<connect type="head" step="auton_delay"/>
+
+	<step type="MSWait" ctrl_name= "gen" name="auton_delay" time="7.0">
+		<connect type="next" step="drive_forward"/>
+	</step>
+	
+	<step type="DrivePower" ctrl_name= "drive" name="drive_forward" forward="0.25">
+		<connect type="next" step="drive_forward_wait"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="drive_forward_wait" time="2.0">
+		<connect type="next" step="drive_stop"/>
+	</step>
+	
+	<step type="DrivePower" ctrl_name= "drive" name="drive_stop" forward="0.0">
+		<connect type="next" step="start_dump"/>
+	</step>
+
+	<!--
+		I think arm up is negative, if not working change power to positive to make the arm move the other way
+		I just guessed at the amount of time in the wait, longer should be OK with the limit switch
+	-->
+	<step type="SetPower" ctrl_name="arm" name="start_dump" power="-1.0">
+		<connect type="next" step="dump_wait"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="dump_wait" time="1.0">
+		<connect type="next" step="end_dump"/>
+	</step>
+
+	<step type="SetPower" ctrl_name="arm" name="end_dump" power="0.0">
+	</step>
+	
+</macro>

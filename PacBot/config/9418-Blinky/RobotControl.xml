@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name = "Blinky">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" />
+	</interface>
+	
+  <control type="arcade_drive" name="drive">
+       <motor name="front_left"   	type="CANTalon" 	port="3" invert="false" />
+       <motor name="back_left"  	type="CANTalon" 	port="4" invert="false" />
+       <motor name="front_right"  	type="CANTalon"  	port="1" invert="true" />
+       <motor name="back_right" 	type="CANTalon" 	port="2" invert="true" />
+       <oi name="forward"      	device="pilot" chan="1"  scale="-1.0"	/>
+       <oi name="turn"         	device="pilot" chan="2"  scale="-1.0"	/>
+    </control>
+</robot>
+
+
+

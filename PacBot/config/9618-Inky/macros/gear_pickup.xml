@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<macro name= "GearPickup">
+	<connect type="head" step="hand_in"/>
+	
+	<step type="SetState" ctrl_name= "hand" name="hand_in" state="false">
+		<connect type="next" step="hand_in_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="hand_in_wait" time="0.5">
+		<connect type="next" step="elevator_lower"/>
+	</step>
+	
+	<step type="SetState" ctrl_name= "elevator" name="elevator_lower" state="true">
+		<connect type="next" step="elevator_lower_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="elevator_lower_wait" time="0.5">
+		<connect type="next" step="pincher_retract"/>
+	</step>
+	
+	<step type="SetState" ctrl_name= "pincher" name="pincher_retract" state="true">
+		<connect type="next" step="pincher_retract_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="pincher_retract_wait" time="0.5">
+		<connect type="next" step="hand_out"/>
+	</step>
+	
+	<step type="SetState" ctrl_name= "hand" name="hand_out" state="true">
+		<connect type="next" step="hand_out_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="hand_out_wait" time="0.5">
+		<connect type="next" step="finger_up"/>
+	</step>
+	
+	<step type="SetState" ctrl_name= "finger" name="finger_up" state="false">
+		<connect type="next" step="finger_up_wait"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="finger_up_wait" time="0.5">
+		<connect type="next" step="hand_in_2"/>
+	</step>
+	
+	<step type="SetState" ctrl_name= "hand" name="hand_in_2" state="false">
+		<connect type="next" step="hand_in_2_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="hand_in_2_wait" time="0.5">
+		<connect type="next" step="elevator_raise"/>
+	</step>
+	
+	<step type="SetState" ctrl_name= "elevator" name="elevator_raise" state="false">
+		<connect type="next" step="elevator_raise_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="elevator_raise_wait" time="0.5">
+		
+	</step>
+
+
+</macro>

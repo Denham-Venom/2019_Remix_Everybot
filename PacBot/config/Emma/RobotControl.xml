@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<robot name="Clyde">
+	<interface>
+		<device name = "pilot"      type = "joystick" num="0" /> 
+                <device name = "switches"   type = "joystick" num="1" /> 
+	</interface>
+
+	
+<control type="pjs" name="pjs" period="0.02" closed_loop="true"
+     max_velocity="500.0" desired_acceleration="2500.0" desired_deceleration="2500.0">
+
+        <motor   type="TalonSrxCan" invert="false"  port="10">
+        <encoder invert="false"     scale="0.00045" drive="true"/>
+        <pid     kf="0.0" kp="0.02" ki="0.0000"     kd="0.0" />
+    </motor>
+
+    <setpoints>
+        <setpoint name="emma"   pjs="-90" index="0" />
+        <setpoint name="ross"   pjs="-45" index="1" />
+        <setpoint name="yihan"  pjs="45" index="2" />
+        <setpoint name="rushi"  pjs="90" index="3" />
+    </setpoints>
+
+    <oi name="setpoint0"            device="switches"  chan="5" />
+    <oi name="setpoint1"            device="switches"  chan="6" />
+    <oi name="setpoint2"            device="switches"  chan="8" />
+    <oi name="setpoint3"            device="switches"  chan="9" />
+    <oi name="analog"               device="pilot"     chan="1" scale="1.0" invert="false" deadband = "0.05"/>
+    <oi name="m_closed_loop_state"  device="switches"  chan="7" invert="false" />
+
+  </control>
+</robot>

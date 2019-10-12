@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot name = "Pinky">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" />
+	</interface>
+	
+  <control type="arcade_drive" name="drive">
+       <motor name="front_left"   	type="Victor" 	port="6" invert="false"     />
+       <motor name="back_left"  	type="Victor" 	port="7" invert="false"     />
+       <motor name="front_right"  	type="Victor"  	port="8" invert="true"      />
+       <motor name="back_right" 	type="Victor" 	port="9" invert="true"      />
+       <oi name="forward"        	device="pilot" chan="1"  scale="-1.0"	    />
+       <oi name="turn"          	device="pilot" chan="2"  scale="-1.0"	    />
+       <oi name="arc"           	device="pilot" chan="0"  scale="-1.0"   />
+       <oi name="power_arc"         device="pilot" chan="1"  arc_turn_power="-0.20"
+                                    arc_fwd_power="0.8" arc_turn_scale="0.70"   />
+    </control>
+    
+   <control type="motor" name="shoulder_left" max_cmd_delta="0.2" period="0.05">
+       <motor type="Talon" port="4" invert="false" />
+       <oi name="momentary_a"	device="pilot" chan="6" value="-1.0" invert="false"/>
+       <oi name="momentary_b"	device="pilot" chan="8" value="1.0" invert="false"/>
+   </control>
+
+   <control type="motor" name="elbow_left" max_cmd_delta="0.2" period="0.05">
+       <motor type="Talon" port="5" invert="false" />
+       <oi name="momentary_a"	device="pilot" chan="5" value="1.0" invert="false"/>
+       <oi name="momentary_b"	device="pilot" chan="7" value="-1.0" invert="false"/>
+   </control>
+
+</robot>
+
+
+

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<robot name = "TestBed">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" />
+	</interface>
+
+	<control name="drive" type="arcade_drive" period="0.05" priority="0">
+		<motor name = "left"    type = "Talon" port = "3"  invert = "false"/>
+		<motor name = "right"   type = "Talon" port = "2"  invert = "true"/>
+
+		<oi name = "forward" device = "pilot" chan = "1" scale="-1.0"/>
+		<oi name = "turn"    device = "pilot" chan = "2" scale="-1.0"/>			
+	</control>	
+
+	<control name="intake" type="motor" period = "0.05"  priority="0">
+		<motor name="intake" type="Talon" port="1"  invert="false" />
+
+        <oi name="momentary_a" value="0.5" 	device="pilot" chan="6" />
+       	<oi name="momentary_b" value="-0.5" 	device="pilot" chan="8" />
+	</control>	
+
+	<control name="turret" type="turret" period = "0.05"  priority="0">
+		<motor name = "t1"    type = "Talon" port = "0"  invert = "false" />
+
+		<aps port="3" p1_raw ="0.0" p1_cal="-180.0" p2_raw="4.8" p2_cal="180.0" raw_range="4.8" wraps="0"  />
+		
+        <pid kp="0.5" ki="0.0" kd="0.0" targ_min="-180.0" targ_max="180.0" targ_thp="0.2" cntl_min="-1.0" cntl_max="1.0" />
+        
+        <oi name="momentary_a" value="0.25" 	device="pilot" chan="5" />
+       	<oi name="momentary_b" value="-0.25" 	device="pilot" chan="7" />
+       	
+       	<oi name="increment" step="0.1" 		device="pilot" chan="4" />
+        <oi name="decrement" step="0.1" 		device="pilot" chan="2" />
+        <oi name="stop"      					device="pilot" chan="1" />
+        <oi name="stop"      					device="pilot" chan="3" />		
+	</control>	
+	
+	<macro name="auton" file="/config/macros/testbed_auton0.xml">
+        <oi name="auton_test" device="pilot" chan="10" />
+	</macro>
+</robot>
+

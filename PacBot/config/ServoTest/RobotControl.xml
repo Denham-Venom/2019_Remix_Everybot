@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot name="Servo Test">
+    <interface>
+        <device name="pilot"              type="joystick"     num="0" />
+    </interface>
+
+  <control type="servo" name="servo_0" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="0" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_1" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="1" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_2" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="2" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_3" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="3" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_4" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="4" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_5" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="5" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_6" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="6" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_7" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="7" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_8" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="8" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+
+  <control type="servo" name="servo_9" period="0.1" step_size="15" up_position="180" down_position="-180">
+    <servo name="servo" port="9" />
+        
+    <oi name="servo_up"     device="pilot" chan="5" />
+    <oi name="servo_down"   device="pilot" chan="7" />
+  </control>
+</robot>

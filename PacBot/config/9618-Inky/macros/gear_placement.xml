@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<macro name= "Gear Placement">
+	<connect type="head" step="pincher_extend"/>
+
+	<step type="SetState" ctrl_name= "pincher" name="pincher_extend" state="false">
+		<connect type="next" step="pincher_extend_wait"/>
+	</step>
+
+
+
+</macro>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<robot name = "SWTestBed">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" />
+	</interface>
+
+	<control type="compressor" name="Compressor" fuse="7" period="0.1">
+   	  <digital_input   port="9" invert="true"/>
+   	  <relay port="1" />
+    </control>
+</robot>
+
+
+

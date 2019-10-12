@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name = "Kiwi">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" />
+		<device name = "copilot"   type = "joystick" num="1" />
+	</interface>
+	
+   <control type="kiwi_drive" name="drive">
+       <motor name="front_left"   type="Victor" port="1" invert="false" />
+       <motor name="front_right"  type="Victor" port="2" invert="false" />
+       <motor name="back"  	      type="Victor" port="0"  invert="false" />
+ 
+       <oi name="forward"    	device="pilot" chan="1"   scale="0.8"/>
+       <oi name="lateral"     device="pilot" chan="0"     scale="-0.8"/>
+       <oi name="rotate"      device="pilot" chan="2"     scale="0.7"/>
+   </control>
+</robot>
+

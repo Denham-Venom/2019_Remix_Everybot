@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<robot name="Clyde">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" /> 
+	</interface>
+
+	<oi name = "config_arm" device = "pilot" chan = "11" invert = "false" />
+	<oi name = "config_load" device = "pilot" chan = "12" invert = "false" />
+	
+	<control type = "arcade_drive"  period = "0.02" priority = "0">
+		<motor name = "front_left" type = "VictorSP" port="8" invert = "false"  />
+		<motor name = "back_left" type = "VictorSP" port="9" invert = "false"  />
+		<motor name = "front_right"  type = "VictorSP" port="6" invert = "true" />
+ 		<motor name = "back_right"  type = "VictorSP" port="7" invert = "true" />
+
+		<gyro port="0" sensitivity="0.007"/>
+		
+		<encoder name="left"  port_a="4" port_b="5" scale="0.090" invert="true" />
+		<encoder name="right" port_a="6" port_b="7" scale="0.090" invert="false" />
+ 
+ 		<oi name = "forward" device = "pilot" chan = "1" invert="true" deadband="0.05" />
+		<oi name = "turn"    device = "pilot" chan = "2" invert="true" deadband="0.05" />
+	
+		<oi name = "test_fwd" 	device = "pilot" chan = "7" />
+		<oi name = "test_rev"	device = "pilot" chan = "8" />
+		
+		
+		
+	</control>
+</robot>

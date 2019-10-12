@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<macro name= "Do Nothing">
+	<connect type="head" step="pre_auton"/>
+	<connect type="abort" step="drive_stop"/>
+
+	<step type="MSWait" ctrl_name= "gen" name="pre_auton" time="0.01">
+		<connect type="next" step="drive_stop"/>
+	</step>
+
+	<step type="DrivePower" ctrl_name= "drive" name="drive_stop" forward="0.0">
+	</step>
+
+</macro>

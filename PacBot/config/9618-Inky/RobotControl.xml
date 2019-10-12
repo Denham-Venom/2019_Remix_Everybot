@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot name = "Inky">
+	<interface>
+		<device name = "pilot"   type = "joystick" num="0" />
+		<device name = "copilot"   type = "joystick" num="1" />
+	</interface>
+
+    <auton name="Solenoid Test"              file="/robot/config/macros/Auton2.xml"  />
+    
+    
+    <macro name="gear_get" file="/robot/config/macros/gear_get.xml" >
+		<oi name="start" device="copilot" chan="9" />
+	</macro>
+	
+	<macro name="gear_pickup" file="/robot/config/macros/gear_pickup.xml" >
+		<oi name="start" device="copilot" chan="10" />
+	</macro>
+	
+	<macro name="gear_placement" file="/robot/config/macros/gear_placement.xml" >
+		<oi name="start" device="pilot" chan="3" />
+	</macro>
+	
+	<control type="compressor" name="Compressor" fuse="4" period="0.1">
+   	  <digital_input   port="0" invert="true"/>
+   	  <relay port="0" />
+    </control>
+	
+  <control type="arcade_drive" name="drive">
+       <motor name="front_left"   	type="CanTalon" 	port="4" invert="false"     />
+       <motor name="back_left"  	type="CanTalon" 	port="3" invert="false"     />
+       <motor name="front_right"  	type="CanTalon"  	port="1" invert="true"      />
+       <motor name="back_right" 	type="CanTalon" 	port="2" invert="true"      />
+       <oi name="forward"        	device="pilot" chan="1"  scale="-1.0"	    />
+       <oi name="turn"          	device="pilot" chan="2"  scale="-1.0"	    />
+       <oi name="arc"           	device="pilot" chan="0"  scale="-1.0"   />
+    </control>
+    
+   <disabled_control type="motor" name="intake" max_cmd_delta="0.2" period="0.05">
+       <motor type="CanTalon" port="5" invert="false" />
+       <oi name="momentary_a"	device="pilot" chan="6" value="-1.0" invert="false"/>
+       <oi name="momentary_b"	device="pilot" chan="8" value="1.0" invert="false"/>
+   </disabled_control> n
+
+   <disabled_control type="motor" name="feeder" max_cmd_delta="0.2" period="0.05">
+       <motor type="CanTalon" port="6" invert="false" />
+       <oi name="momentary_a"	device="pilot" chan="5" value="1.0" invert="false"/>
+       <oi name="momentary_b"	device="pilot" chan="7" value="-1.0" invert="false"/>
+   </disabled_control>
+
+  <control type="solenoid" name="hand" period="0.1" >
+ 		<solenoid name="a" module="0" port="0" />
+      <oi name="off"     device="copilot" chan="1" invert="false"/>
+      <oi name="on"    device="copilot" chan="2" invert="false"/>
+  </control>
+
+  <control type="solenoid" name="finger" period="0.1" >
+ 		<solenoid name="a" module="0" port="1" />
+      <oi name="off"     device="copilot" chan="3" invert="false"/>
+      <oi name="on"    device="copilot" chan="4" invert="false"/>
+      
+  </control>
+  
+    <control type="solenoid" name="elevator" period="0.1" >
+ 		<solenoid name="a" module="0" port="4" />
+      <oi name="on"     device="copilot" chan="6" invert="false"/>
+      <oi name="off"    device="copilot" chan="8" invert="false"/>
+      
+  </control>
+  
+    <control type="solenoid" name="pincher" period="0.1" >
+ 		<solenoid name="a" module="0" port="2" />
+      <oi name="on"     device="copilot" chan="5" invert="false"/>
+      <oi name="off"    device="copilot" chan="7" invert="false"/>
+      
+  </control>
+  
+   <control type="solenoid" name="wall" period="0.1" >
+ 		<solenoid name="a" module="0" port="3" />
+      <oi name="on"     device="copilot" chan="9" invert="false"/>
+      <oi name="off"    device="copilot" chan="10" invert="false"/>
+      
+   </control>
+      
+      
+  
+</robot>
+
+
+

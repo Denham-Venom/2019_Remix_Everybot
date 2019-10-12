@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<macro name= "centerSwitch">
+	<connect type="head" step="delay"/>
+	
+	<step type="MSWait" ctrl_name= "gen" name="delay" time="1.0">
+		<connect type="next" step="switch_select"/>
+	</step>
+	
+	<step type="Zone" ctrl_name="game_data" name="switch_select" zone="near">
+		<connect type="left" step="turn_left"/>
+		<connect type="right" step="turn_right"/>
+		<connect type="invalid" step="drive_forward"/>
+	</step>
+	
+	<!--
+  	Left Switch
+	-->
+
+	<step type="DrivePower" ctrl_name= "drive" name="turn_left" forward="0.25"  turn="0.55">
+		<connect type="next" step="turn_left_wait"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="turn_left_wait" time="0.2">
+		<connect type="next" step="drive_forward_left"/>
+	</step>
+
+	<step type="DrivePower" ctrl_name= "drive" name="drive_forward_left" forward="0.5"  turn="0.0">
+		<connect type="next" step="drive_forward_wait_left"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="drive_forward_wait_left" time="3.0">
+		<connect type="next" step="drive_stop_left"/>
+	</step>
+	
+	<step type="DrivePower" ctrl_name= "drive" name="drive_stop_left" forward="0.0">
+		<connect type="next" step="start_dump_left"/>
+	</step>
+
+	<step type="SetPower" ctrl_name="arm" name="start_dump_left" power="-.5">
+		<connect type="next" step="dump_wait_left"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="dump_wait_left" time="5.0">
+		<connect type="next" step="end_dump_left"/>
+	</step>
+
+	<step type="SetPower" ctrl_name="arm" name="end_dump_left" power="0.0">
+	</step>
+
+	<!--
+  	Right Switch
+	-->
+	
+	<step type="DrivePower" ctrl_name= "drive" name="turn_right" forward="0.25"  turn="-0.17">
+		<connect type="next" step="turn_right_wait"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="turn_right_wait" time="0.15">
+		<connect type="next" step="drive_forward_right"/>
+	</step>
+
+	<step type="DrivePower" ctrl_name= "drive" name="drive_forward_right" forward="0.6"  turn="0.0">
+		<connect type="next" step="drive_forward_wait_right"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="drive_forward_wait_right" time="3.0">
+		<connect type="next" step="drive_stop_right"/>
+	</step>
+	
+	<step type="DrivePower" ctrl_name= "drive" name="drive_stop_right" forward="0.0">
+		<connect type="next" step="start_dump_right"/>
+	</step>
+
+	<step type="SetPower" ctrl_name="arm" name="start_dump_right" power="-.5">
+		<connect type="next" step="dump_wait_right"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="dump_wait_right" time="5.0">
+		<connect type="next" step="end_dump_right"/>
+	</step>
+
+	<step type="SetPower" ctrl_name="arm" name="end_dump_right" power="0.0">
+	</step>
+	
+	<!--
+  	Invalid
+	-->
+	
+	<step type="DrivePower" ctrl_name= "drive" name="drive_forward" forward="0.5">
+		<connect type="next" step="drive_forward_wait"/>
+	</step>
+	
+	<step type="MSWait" ctrl_name= "gen" name="drive_forward_wait" time="3.0">
+		<connect type="next" step="drive_stop"/>
+	</step>
+	
+	<step type="DrivePower" ctrl_name= "drive" name="drive_stop" forward="0.0">
+	</step>
+	
+</macro>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot name = "Everybot2018">
+	<interface>
+		<device name = "pilot"     type = "joystick" num="0" />
+                <device name = "copilot"   type = "joystick" num="1" />
+	</interface>
+
+  <control type="arcade_drive" name="drive">
+       <motor name="front_left"   	type="Victor" 	port="2" fuse="15" invert="false"     />
+       <motor name="back_left"  	type="Victor" 	port="3" fuse="14" invert="false"     />
+       <motor name="front_right"  	type="Victor"  	port="0" fuse="8" invert="true"      />
+       <motor name="back_right" 	type="Victor" 	port="1" fuse="9" invert="true"      />
+       <oi name="forward"        	device="pilot" chan="1"  scale="-1.0"	    />
+       <oi name="turn"          	device="pilot" chan="2"  scale="-0.6"	    />
+    </control>
+    
+    <auton name="drive"             file="/robot/config/macros/drive.xml"  />
+    
+
+<control type="motor" name="intake" max_cmd_delta="0.2" period="0.05">
+       <motor type="Victor" port="5"  invert="true" />
+       <motor type="Victor" port="6"  invert="false" />
+       <oi name="momentary_a"	device="pilot" chan="7" value="1.0" invert="false"/>
+       <oi name="momentary_b"	device="pilot" chan="5" value="-1.0" invert="false"/>
+       <oi name="momentary_a"	device="copilot" chan="7" value="1.0" invert="false"/>
+       <oi name="momentary_b"	device="copilot" chan="5" value="-1.0" invert="false"/>
+
+   </control>
+   
+<control type="motor" name="arm" max_cmd_delta="0.2" period="0.05">
+       <motor type="Victor" port="4"  invert="false" /> 
+       <oi name="momentary_a"	device="copilot" chan="8" value="0.5" invert="false"/>
+       <oi name="momentary_b"	device="copilot" chan="6" value="-0.5" invert="false"/>
+       <oi name="momentary_a"	device="pilot" chan="8" value="0.5" invert="false"/>
+       <oi name="momentary_b"	device="pilot" chan="6" value="-0.5" invert="false"/>
+       <digital_input name= "upper_limit" port= "0" normally_open= "true"/>
+       <digital_input name= "lower_limit" port= "1" normally_open= "true"/>
+   </control>
+
+   
+</robot>
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<macro name= "Gear GPP">
+	<connect type="head" step="wait"/>
+
+	<step type="MSWait" ctrl_name= "gen" name="wait" time="0.1">
+		<connect type="next" step="gear_get"/>		
+	</step>
+	
+
+
+	<step type="MSExecute" ctrl_name= "gen" name="gear_get" macro_name= "gear_get">
+		<connect type="next" step="gear_pickup"/>
+	</step>
+
+	<step type="MSExecute" ctrl_name= "gen" name="gear_pickup" macro_name= "gear_pickup">
+		<connect type="next" step="gear_placement"/>
+	</step>
+
+    <step type="MSExecute" ctrl_name= "gen" name="gear_placement" macro_name= "gear_placement">
+		
+	</step>
+</macro>

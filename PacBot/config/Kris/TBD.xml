@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<macro name= "TBD">
+	<connect type="head" step="forward"/>
+
+	<step name="forward" type="SetPower" ctrl_name= "pjs" scale="1">
+		<connect type="next" step="wait_1"/>
+	</step>
+	
+	<step name="wait_1" type="MSWait" ctrl_name= "gen" time="1">
+		<connect type="next" step="backward"/>
+	</step>
+
+	<step  name="backward" type="SetPower" ctrl_name= "pjs" scale="0.3">
+		<connect type="next" step="stop"/>
+	</step>
+	
+	<step name="stop" type="SetPower" ctrl_name="pjs" scale="0.0"> </step>
+
+</macro>

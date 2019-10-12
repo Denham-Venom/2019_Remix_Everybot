@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<macro name= "GearGet">
+	<connect type="head" step="finger_down"/>
+
+	<step type="SetState" ctrl_name= "finger" name="finger_down" state="true">
+		<connect type="next" step="finger_down_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="finger_down_wait" time="0.5">
+		<connect type="next" step="hand_out"/>
+	</step>
+
+	<step type="SetState" ctrl_name= "hand" name="hand_out" state="true">
+		<connect type="next" step="hand_out_wait"/>
+	</step>
+
+	<step type="MSWait" ctrl_name= "gen" name="hand_out_wait" time="0.5">
+		</step>
+	
+</macro>
