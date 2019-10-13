@@ -1,0 +1,61 @@
+<?xml version=”1.0”?>
+<robot name="Rafael”>
+    <interface>
+
+        <device name = "driver_station"     type="joystick">
+
+    </interface>
+
+    <control type="GameData name="game_data" device_name="driver_station">
+
+    </control>
+
+    <control type="camera_server">
+
+        [<camera_id="0" [res_x="240"]  [res_y="180"] [fps="15"] />]
+
+        [<oi name="toggle" device="pilot" chan="5" [invert="false"] />]
+
+    <control>
+
+    <control type="arcade_drive" name="drive">
+
+        [<motor name="front_left" [type="Talon"] [module="1"] [port="1"] [invert="false"] />]
+        [<motor name="front_right" [type="Talon"] [module="1"] [port="2"] [invert="false"] />]
+        [<motor name="back_left" [type="Talon"] [module="1"] [port="3"] [invert="false"] />]
+        [<motor name="back_right" [type="Talon"] [module="1"] [port="4"] [invert="false"] />]
+
+        [<solenoid name="brake" [module="1"] [port="1"] />]
+        [<solenoid name="gear" [module="1"] [port="2"] />]
+
+        [<oi name="forward" device="pilot" chan="3" [scale="-0.8"|invert="false"]/>] <!-- analog right joy-->
+        [<oi name="turn" device="pilot" chan="2" [scale="0.8"|invert="false"]/>] <!-- analog right joy-->
+        [<oi name="brake_state" device="pilot" chan="8" [invert="false"]/>] <!--digital right trigger-->
+        [<oi name="gear_on" device="pilot" chan="0" [invert="false"]/>] <!--digital-->
+        [<oi name="gear_off" device="pilot" chan="0" [invert="false"]/>] <!--digital-->
+        [<oi name="gear_toggle" device="pilot" chan="0" [invert="false"]/>] <!--digital-->
+        [<oi name="gear_state" device="pilot" chan="0" [invert="false"]/>] <!--digital-->
+
+</control>
+
+    <control type="motor" [name="ball_intake_motor"] [max_cmd_delta="0.25"] [period="0.1"]
+        [min_control="-1.0"] [max_control="1.0"] >
+
+        [<motor [type="Talon"] [module="1"] [port="1"] [invert="false"] />]
+        [<motor [type="Talon"] [module="1"] [port="1"] [invert="false"] />]
+
+        [<digital_input name="upper_limit" port="1" [normally_open="false"] />]
+        [<digital_input name="lower_limit" port="2" [normally_open="false"] />]
+        
+        [<oi name="analog" device="pilot" chan="1" [scale="1.0"|invert="false"]/>]
+        [<oi name="increment" device="pilot" chan="2" step="0.1" [invert="false"]/>]
+        [<oi name="decrement" device="pilot" chan="3" step="0.1" [invert="false"]/>]
+        [<oi name="stop" device="pilot" chan="4" [invert="false"]/>]
+        [<oi name="momentary_a" device="pilot" chan="5" value="0.1" [invert="false"]/>]
+        [<oi name="momentary_b" device="pilot" chan="6" value="-0.1" [invert="false"]/>]
+        [<oi name="momentary_c" device="pilot" chan="7" value="0.3" [invert="false"]/>]
+        [<oi name="momentary_d" device="pilot" chan="8" value="-0.3" [invert="false"]/>]
+    </control>
+
+
+</robot>
